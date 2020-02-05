@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+   <meta charset ="ufd-8"/>
+    <title>afficher</title>
+    <style media= "screen">
+    body{
+      background-color: lightblue;
+    }
+    h1{
+      color: #ffffff;
+      font-size: 3em;
+      margin-top: 2em;
+    }
+    div{
+      color: #ffffff;
+      font-size: 2em;
+      
+    }
+    </style>
+   </head> 
+ <body onclick="onclick=animation.play()">
+  <h1>Un titre animé</h1>
+  <div>Anime.js, une librairie</div>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script type="text/javascript">
+     let animation=anime({
+       targets:'h1',
+       translateX:'40%',
+       autoplay:false
+     })
+     /*let tl = anime.timeline({
+       duration:750
+     })
+
+     tl.add({
+       targets: 'h1',
+       tranlateX: '70%'
+     })
+     tl.add({
+       targets: 'div',
+       tranlateY: '-70%'
+     })*/
+     document.querySelector('h1').addEventListener('mouseover',()=> { animation.play})
+  </script> 
+
+
+</body>
+</html>
