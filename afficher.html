@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html>
-
+   <!--on veut animé une page web contenant essayons ceci-->
    <head>
    <meta charset ="ufd-8"/>
     <title>afficher</title>
+      <!-- appliquons du style à notre page-->
     <style media= "screen">
     body{
-      background-color: lightblue;
+      background-color: lightblue;/* ici le fond de notre page aura la couleur choisie*/
     }
     h1{
-      color: #ffffff;
-      font-size: 3em;
-      margin-top: 2em;
+      color: #ffffff;/* la couleur du titre de notre page*/
+      font-size: 3em;/* la taille de notre titre est choisie ici*/
     }
     div{
-      color: #ffffff;
-      font-size: 2em;
-      
+      color: #ffffff;/* la couleur du texte etant dans la balise div*/
+      font-size: 2em;/*la taille du texte etant dans la balise div*/
     }
     </style>
    </head> 
- <body onclick="onclick=animation.play()">
+ <body onclick="onclick=animation.play()"><!-- ici on a l'attribut onclclick...pour dire que l'animation se ferra lorsque la souris passerra sur le texte-->
   <h1>Un titre animé</h1>
   <div>Anime.js, une librairie</div>   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script><!--une bibliothèque pour animation js mit dans la balise script-->
   <script type="text/javascript">
-     let animation=anime({
-       targets:'h1',
-       translateX:'40%',
-       autoplay:false
+     let animation=anime({// création d'une variable ayant des attribut permettant l'animation
+       targets:'h1',// ici on specifie quel objet sera animé
+       translateX:'40%',//quel d'animation on desire effectuer
+       autoplay:false// ceci c'est pour dire que l'animation se fera par le passage de la souris
      })
-     /*let tl = anime.timeline({
-       duration:750
-     })
-
-     tl.add({
-       targets: 'h1',
-       tranlateX: '70%'
-     })
-     tl.add({
-       targets: 'div',
-       tranlateY: '-70%'
-     })*/
-     document.querySelector('h1').addEventListener('mouseover',()=> { animation.play})
+   
+     document.querySelector('h1').addEventListener('mouseover',()=> { animation.play})// ceci permet de mettre actif autoplay
   </script> 
 
 
